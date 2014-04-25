@@ -1,0 +1,252 @@
+/* ***************************************************************** */
+html{color:#000;background-color:#fff;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0;} 
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+ul,ol{list-style:none;}
+caption,th{text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:text-top;}
+sub{vertical-align:text-bottom;}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;}
+input,textarea,select{font-size:100%;}
+legend{color:#000;}
+strong{font-weight:bold;}
+em{font-style:italic;}
+/* ***************************************************************** */
+html {
+	height: 100%;
+	background:#cdcdcd url(images/bg.png) bottom left fixed repeat-x;
+}
+body {
+	height: 100%;
+	font-family: Trebuchet, "Trebuchet MS", sans-serif;
+	font-size: 10pt;
+}
+h1{font-size:13pt}
+h2{font-size:12pt;margin-top:5pt}
+h3{font-size:11pt;margin-top:5pt}
+p{margin-top:3pt}
+
+a:link, a:visited {
+	color: #7a7c7e;
+	text-decoration: none;
+}
+a:hover, a:active {
+	color: #f19400; 
+	text-decoration: underline;
+}
+/* ***************************************************************** */
+#container {
+	position: relative;
+	width: 845px;
+	margin: 0 auto;
+	border: 0;
+	padding: 0;
+	padding-bottom: 10px;
+}
+/* ***************************************************************** */
+#container div.header {
+	position: relative;
+	margin-bottom: 10px;
+	background-color: #fff;
+	border: 1px solid #aaa;
+	border-top: 0;
+	border-bottom-left-radius:6px;
+	border-bottom-right-radius:6px;
+	box-shadow: 2px 2px 4px #888;
+}
+#container div.header div.logo {
+	position: relative;
+	background: url(images/pc_logo.png) no-repeat top left;
+	width:321px; height:105px;
+	display: inline;
+	float: left;
+	margin-right: 20px;
+}
+#container div.header div.title {
+	padding: 6px;
+}
+#container div.header div.title h1 {
+	font-size: 11pt;
+	font-weight: bold;
+}
+#container div.header div.menu {
+	position: relative;
+	clear: left;
+}
+#container div.header div.menu p {
+	margin: 0 0 0 5px;
+}
+#container div.header div.menu ul {
+	/* 1st level */
+	height: 23px;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+}
+#container div.header div.menu ul li {
+	position: relative;
+	display: inline;
+	float: left;
+	list-style-type: none;
+	list-style-image: none;
+	margin-left: 3px;
+}
+#container div.header div.menu ul li a {
+	display: block;
+	float: left;
+	text-decoration: none;
+	height: 23px;
+	line-height: 23px;
+	padding: 0 5px;
+}
+#container div.header div.menu ul ul {
+	/* 2nd level overwrites */
+	display: block;
+	visibility: hidden;
+	position: absolute;
+	float: none;
+	width:auto; height:auto;
+	top:23px; left:0; 
+	padding: 0;
+	margin: 0;
+	background-color: #fff;
+	border: 1px solid #7a7c7e;
+	box-shadow: 2px 2px 4px #888;
+	opacity: 0.95;
+}
+#container div.header div.menu li li {
+	display: list-item;
+	list-style-type: none;
+	list-style-image: none;
+	float: none;
+	width: 195px;
+	margin: 0;
+	border: 0;
+}
+#container div.header div.menu li li a {
+	margin: 0;
+	border: 0;
+	padding: 0 6px;
+	float: none;
+}
+#container div.header div.menu ul ul ul {
+	/* 3rd level overwrites */
+	top:0; left: 195px;
+}
+#container div.header div.menu li:hover>ul,
+#container div.header div.menu li.jsHover>ul,
+#container div.header div.menu a:hover>ul {
+	/* hovering */
+	visibility: visible;
+}
+#container div.header div.menu li:hover {
+	background-color: #f6f6f6;
+}
+#container div.header div.menu a.active {
+	font-weight: bold;
+}
+#container div.header div.menu a:link, 
+#container div.header div.menu a:visited {
+	color: inherit;
+	text-decoration: none;
+}
+/* ***************************************************************** */
+#container div.body {
+	margin: 0;
+	padding: 5px;
+	padding-bottom:10px;
+	background-color: #fff;
+	border: 1px solid #aaa;
+	border-radius:6px;
+	box-shadow: 2px 2px 4px #888;
+}
+/* ***************************************************************** */
+#container div.error,
+#container div.info {
+	padding: 4px 4px 8px 28px;
+	margin: 4px 6px 8px 4px;
+	border-radius: 5px;
+	box-shadow: 2px 2px 4px #888;
+	min-height: 24px;
+}
+#container div.error {
+	background: #ff5f5b url(images/icoError.png) no-repeat 6px 6px;
+	border: 1px solid #ef4f4b;
+}
+#container div.info {
+	background: #fdf6bb url(images/icoInfo.png) no-repeat 6px 6px;
+	border: 1px solid #ede6ab;
+}
+#container div.error *,
+#container div.info * {
+	padding: 0; margin: 0;
+	background: none;
+}
+#container div.error h1,
+#container div.info h1 {
+	font-size: 110%;
+	font-weight: bold;
+}
+#container div.info a,
+#container div.error a {
+	color: #000;
+	text-decoration: underline;
+}
+/* ***************************************************************** */
+table.form {
+	border-collapse: collapse;
+	margin-top: 16px;
+}
+table.form td {
+	padding: 2px 4px;
+}
+table.form td.center {
+	text-align: center;
+}
+table.form td.right {
+	text-align: right;
+}
+table.form td.top {
+	vertical-align: top;
+}
+/* ***************************************************************** */
+table.list {
+	margin-top:3pt;
+	border: 1px solid #aaa;
+}
+table.list th {
+	background-color: #aaa;
+	color: #000;
+	font-weight: bold;
+}
+table.list th,
+table.list td {
+	padding: 2px 4px 2px 8px;
+	vertical-align: top;
+}
+table.list th.right,
+table.list td.right {
+	text-align: right;
+}
+table.list tr.shade1,
+table.list tr.odd {
+	background-color: #eee;
+}
+table.list tr.shade2,
+table.list tr.even {
+	background-color: #dedede;
+}
+/* ***************************************************************** */
+ul.bullets {
+	list-style: disc outside;
+	padding-left: 21px;
+}
+ul.padded li {
+	padding-top: 1em;
+	padding-left: 4px;
+}

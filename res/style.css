@@ -1,0 +1,257 @@
+@font-face {
+    font-family: 'ubunturegular';
+    src: url('fonts/ubuntu/ubuntu-regular-webfont.eot');
+    src: url('fonts/ubuntu/ubuntu-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/ubuntu/ubuntu-regular-webfont.woff') format('woff'),
+         url('fonts/ubuntu/ubuntu-regular-webfont.ttf') format('truetype'),
+         url('fonts/ubuntu/ubuntu-regular-webfont.svg#ubunturegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+html,body {
+    padding:0;
+    margin:0;
+    background-color:#eee;
+    overflow:hidden;
+    font-family: ubunturegular, sans-serif;
+}
+/* responsive fontsizes */
+@media all and (max-width: 100px) and (min-width: 10px) {
+    .head {font-size: 10pt}
+    .bluetxt {font-size: 8pt}
+    .bigfig {font-size: 14pt}
+}
+@media all and (max-width: 250px) and (min-width: 101px) {
+    .head {font-size: 12pt}
+    .bluetxt {font-size: 9pt}
+    .bigfig {font-size: 14pt}
+}
+@media all and (max-width: 360px) and (min-width: 251px) {
+    .head {font-size: 14pt}
+    .bluetxt {font-size: 10pt}
+    .bigfig {font-size: 18pt}
+}
+@media all and (max-width: 480px) and (min-width: 361px) {
+    .head {font-size: 16pt}
+    .bluetxt {font-size: 11pt}
+    .bigfig {font-size: 20pt}
+}
+@media all and (max-width: 2000px) and (min-width: 481px) {
+    .head {font-size: 18pt}
+    .bluetxt {font-size: 12pt}
+    .bigfig {font-size: 24pt}
+}
+
+div.container {
+    position: relative;
+    width: 100%; height: 100%;
+    background-color:white;
+}
+div.rightmenu{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    right: -14%;
+    height: 100%;
+    width: 14%;
+    z-index: 8;
+    background-image: url("images/menuright.png");
+    background-repeat:no-repeat;
+    background-size: 100% 100%;
+}
+
+div.top {
+    position: relative;
+    width: 100%; height: 32.3%;
+    background-color:#005ABB;
+    background-image: url("images/top.png");
+    background-repeat:no-repeat;
+    background-size:   cover; 
+}
+table.slidetable{
+    padding:0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%;
+}
+tr.graphblock{
+    padding:0px;
+    margin: 0px;
+    background-color:white;
+    border-bottom: solid #005ABB 1px;
+
+}
+
+div.slide1 div.slide2{
+    height: 100%;
+    width: 100%;
+}
+tr#graph1{
+    border-bottom: 0px;
+}
+td.firstcolumn{
+    width:40%;
+}
+
+div.middle{
+    width: 100%; height: 61.45%;    
+}
+
+div.bottom {
+    position: relative;
+    width: 100%; height: 6.25%;
+    background-color:#050F18;
+}
+svg.gauge1{
+    position: relative;
+    margin-top: 3%;
+    margin-left: 8%;
+}
+span.head{
+    position: relative;
+    display: block;
+    color: lightgray;
+    margin-left: 10%;
+    margin-top: 8%;
+}
+span.bluetxt{
+    position: relative;
+    display: block;
+    color: #005ABB;
+    margin-left: 10%;
+    margin-top: 7%;
+    float: left;
+}
+img.notimg{
+    position: relative;
+    display: block;
+    top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+}
+img.smallgraph{
+    position: relative;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+span.currwait{
+    position: relative;
+    display: block;
+    text-align: center;
+}
+span#totab{
+    position: relative;
+    float: right;
+    margin-right: 10%;
+    margin-top: 2%;
+}
+span.avwt{
+    position: relative;
+    float: right;
+    margin-right: 10%;
+    margin-top: 2%;
+}
+div.break{
+    clear:both;
+}
+div.touchbutton{
+    background-color: transparent;
+    height: 9%;
+    width: 15%;
+    z-index: 9;
+}
+div#rtb{
+    position: absolute;
+    right:0;
+}
+div.sidespace{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    right: 0;
+    top: 9%;
+    height: 100%;
+    width: 20%;
+    z-index: 7; 
+    background-color: transparent;   
+}
+#bar1, #bar2 {
+    position: relative;
+    left: 16%;
+    margin-top: 8%;
+}
+.barcontainer{
+    width: 100%;
+    height: 100%;
+}
+.bcl{
+    float: left;
+    width: 70%;
+}
+.bcr{
+    float: left;
+    width: 30%;
+}
+.icons{
+    position: relative;
+    top: 15%;
+    margin-left: 13.5%;
+    width: 72%;
+}
+.seccurrwait{
+    margin-top: 20%;
+}
+.seccurrwaittxt{
+    margin-left: 42% !important;
+    margin-top: 0% !important;
+}
+.secavwt{
+    margin-right: 28% !important
+}
+.secavwttxt{
+    margin-left: 26% !important;
+    margin-top: 0% !important;
+}
+#bad{
+    position: absolute;
+    width: 5%;
+    top: 8%;
+    right: 3%;
+    display: none;
+}
+#good{
+    position: absolute;
+    width: 5%;
+    top: 8%;
+    right: 3%;
+}
+#longestwt{
+    position: relative;
+    float: right;
+    margin-right: 10%;
+    margin-top: 2%;
+}
+#averagewt{
+    position: relative;
+    float: right;
+    margin-right: 10%;
+    margin-top: 3%;
+
+}
+#ajustment {
+    float: right;
+    margin-right: 25%;
+}
+.notcenter{
+    position: absolute;
+    top: 100%;
+    height: 100%;
+    width: 100%;
+    z-index: 7;
+    background-color: blue;
+}
+.notcenter img{
+    width: 100%;
+}

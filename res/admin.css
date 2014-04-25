@@ -1,0 +1,73 @@
+html {
+	overflow-y: scroll; 
+}
+#rtsAdmin {
+	display:none;
+}
+#rtsAdmin table.form{
+	width:100%;
+}
+#rtsAdmin #rtsActiveMessages table {
+	width:100%;
+}
+#rtsAdmin input#txtTerminate {
+	width:700px;
+	padding-left:2px;
+}
+#rtsAdmin input.txtMessage,
+#rtsAdmin input.txtBroadcast {
+	width:700px;
+	margin-bottom:2px;
+	padding-left:2px;
+}
+#rtsAdmin input.txtMessage.info,
+#rtsAdmin input.txtBroadcast.info {
+	background-color:#fdf6bb;
+	background-image:none;
+}
+#rtsAdmin input.txtMessage.alarm,
+#rtsAdmin input.txtBroadcast.alarm {
+	background-color:#ff5f5b;
+	background-image:none;
+}
+/* ***************************************************************** */
+div.collapse {
+	position: relative;
+	padding-top: 6px;
+}
+div.collapse h3 {
+	background: #fff url(images/bgr_shade.png) repeat-x 0 0;
+	padding-left: 20px;
+	border-top: 1px solid #aaa;
+}
+div.collapse div.button {
+	position: absolute;
+	top:12px; left:0;
+	width: 20px; height: 20px;
+}
+div.collapse.open div.button {
+	background: url(images/open.gif) no-repeat 5px 5px;
+	cursor: pointer;
+}
+div.collapse.close div.button {
+	background: url(images/close.gif) no-repeat 5px 5px;
+	cursor: pointer;
+}
+
+div.collapse div.refresh {
+	position: absolute;
+	top:12px; right:0;
+	width: 20px; height: 20px;
+}
+div.collapse.open div.refresh {
+	background: url(images/icoRefresh.png) no-repeat 3px 3px;
+	cursor: pointer;
+}
+div.collapse.open div.refresh.loading {
+	background: url(images/loading.gif) no-repeat 3px 3px;
+	cursor: auto;
+}
+
+div.collapse.close div.refresh {
+	display: none;
+}

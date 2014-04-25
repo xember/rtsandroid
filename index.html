@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Android App</title>
+  <!-- stylesheets -->
+  <link rel="stylesheet" type="text/css" href="res/rts.css"><!-- css with some preset styles used by rts.js -->
+  <link rel="stylesheet" type="text/css" href="res/style.css">
+  <link href="res/royalslider/royalslider.css" rel="stylesheet">
+  <link href="res/royalslider/skins/default/rs-default.css" rel="stylesheet">
+  <!-- javascript libaries-->
+  <script type="text/javascript" src="res/jquery-1.8.3.min.js"></script>
+  <script type="text/javascript" src="res/d3.v3.min.js"></script>
+  <script type="text/javascript" src="res/jquery-ui-1.10.4.custom.min.js"></script>
+  <script type="text/javascript" src="res/jquery.hammer-full.min.js"></script>
+  <script type="text/javascript" src="res/royalslider/jquery.royalslider.min.js"></script>
+  <script type="text/javascript" src="res/widgets/d3arcSingle.js"></script>
+  <script type="text/javascript" src="res/widgets/d3gauge1.js"></script>
+  <script type="text/javascript" src="res/widgets/d3BarChart.js"></script>
+  <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+  <script type="text/javascript" src="res/apphandlers.js"></script>
+ </head>
+ <body>
+  <div class="notcenter"><img src="res/images/notcenter.png"></div>
+  <div class="rightmenu"></div>
+  <div class="sidespace"></div>
+  <div id="rtb" class="touchbutton"></div>
+  <div class="container">
+    <div class="top"></div> <!-- end of div.top !-->
+    <div class="middle royalSlider">
+      <div class="slide1">
+        <table class="slidetable">
+          <tr class ="graphblock">
+            <td class="firstcolumn">
+              <div class="lft">
+                <img class="smallgraph" src="res/images/smallgraph.png">
+                <span class="bigfig currwait">100</span>
+              </div>
+            </td>
+            <td>
+              <div class="wt">
+                <span class="head">Total Waiting</span>
+                <span class="bluetxt">Total Abandoned</span>
+                <span id="totab" class="bigfig">129</span>
+                <div  class="break"></div>
+                <span class="bluetxt">Average Waiting</span>
+                <span class="bigfig avwt">15</span>
+              </div>
+            </td>
+          </tr>
+          <tr class ="graphblock">
+            <td><svg class="gauge1"></svg></td>
+            <td>
+              <div class="wt">
+                <span class="head">Waiting Time</span>
+                <span class="bluetxt">Longest Wait Time</span>
+                <span id="longestwt" class="bigfig">2:37</span>
+                <div  class="break"></div>
+                <span class="bluetxt">Average Wait Time</span>
+                <span id="averagewt" class="bigfig">0:36</span>
+              </div>
+            </td>
+          </tr>
+          <tr class="graphblock" id="graph1">
+            <td colspan = "2">
+              <img src="res/images/slgraph.png" width="100%">
+            </td>
+          </tr>
+        </table>
+      </div> <!-- end of div.slide1 !-->
+
+  <div class="slide2">
+    <table class="slidetable">
+      <tr class ="graphblock">
+        <td>
+          <div class="barcontainer">
+            <div class="bcl">
+              <svg id="bar1"></svg>
+              <img class="icons" src="res/images/icons.png">
+            </div>
+            <div class="bcr">
+              <span id="totalwaiting" class="bigfig currwait seccurrwait">- - -</span>
+              <img id="good" src="res/images/good.png">
+              <img id="bad" src="res/images/bad.png">
+              <span class="bluetxt seccurrwaittxt">Total</span>
+              <span class="bigfig avwt secavwt">- - -</span>
+              <span class="bluetxt secavwttxt">Average</span>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr class ="graphblock">
+        <td>
+          <div class="barcontainer">
+            <div class="bcl">
+              <svg id="bar2"></svg>
+              <img class="icons" src="res/images/icons.png">
+            </div>
+            <div class="bcr">
+              <span class="bigfig currwait seccurrwait">- - -</span>
+              <span class="bluetxt seccurrwaittxt">Average</span>
+              <span class="bigfig avwt secavwt">- - -</span>
+              <span class="bluetxt secavwttxt">Longest</span>
+            </div>
+          </div>
+        </td>
+      </tr>
+      <tr class ="graphblock">
+        <td>
+          <img src="res/images/intrgraph.png" width="100%">
+        </td>
+      </tr>
+    </table>
+
+  </div> <!-- end of div.slide2 !-->
+  </div> <!-- end of div.middle !-->
+  <div class="bottom">
+      <img class="notimg" src="res/images/notification.png">
+  </div>  <!-- end of div.bottom !--> 
+ </body>
+</html>
